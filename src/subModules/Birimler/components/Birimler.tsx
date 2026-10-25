@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Scale } from 'lucide-react';
 import { BaseModalCrud, BirimlerGrid } from '@akalin/ui';
-import BirimForm from '../../../../UrunYonetimi/components/BirimForm';
+import { BirimForm } from '@akalin/product_module';
 import { useTranslation } from 'react-i18next';
 
 export interface BirimlerProps {
