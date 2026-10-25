@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@akalin/ui": ["../webakus/node_modules/@akalin/ui/src/index.ts"],
+      "@akalin/ui/*": ["../webakus/node_modules/@akalin/ui/src/*"],
+      "@akalin/module_core": ["../webakus/node_modules/@akalin/module_core/src/index.ts"],
+      "@akalin/module_core/*": ["../webakus/node_modules/@akalin/module_core/src/*"],
+      "@akalin/barcode_module": ["../akalin-barcode-module/src/index.ts"],
+      "@akalin/barcode_module/*": ["../akalin-barcode-module/src/*"],
+      "@akalin/customer_module": ["../akalin-customer-module/src/index.ts"],
+      "@akalin/customer_module/*": ["../akalin-customer-module/src/*"],
+      "@akalin/finance_module": ["../akalin-finance-module/src/index.ts"],
+      "@akalin/finance_module/*": ["../akalin-finance-module/src/*"],
+      "@akalin/product_module": ["../akalin-product-module/src/index.ts"],
+      "@akalin/product_module/*": ["../akalin-product-module/src/*"],
+      "@akalin/storage_module": ["../akalin-storage-module/src/index.ts"],
+      "@akalin/storage_module/*": ["../akalin-storage-module/src/*"],
+      "@akalin/user_auth_module": ["../akalin-user-auth-module/src/index.ts"],
+      "@akalin/user_auth_module/*": ["../akalin-user-auth-module/src/*"],
+      "@akalin/warehouse_module": ["../akalin-warehouse-module/src/index.ts"],
+      "@akalin/warehouse_module/*": ["../akalin-warehouse-module/src/*"]
+    }
+  },
+  "include": ["src"]
+}
