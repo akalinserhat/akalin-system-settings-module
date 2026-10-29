@@ -1,3 +1,8 @@
+/**
+ * @akalin/system_settings_module - Uygulama Entegrasyonları Bileşeni (UygulamaEntegrasyonlari.tsx)
+ * Bulut Depolama & Dosya Yönetimi ve Yapay Zeka (LLM) entegrasyonlarını BaseSystemPage şablonunda sunar.
+ */
+
 import React, { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams, useNavigate } from 'react-router-dom';
@@ -20,34 +25,43 @@ const UygulamaEntegrasyonlari: React.FC = () => {
     }
   }, [selectedCategory, setSearchParams, navigate]);
 
-  const modules: SystemSettingModule[] = useMemo(() => [
-    { 
-      id: 'bulut-depolama', 
-      name: t('BulutDepolama_baslik', 'Bulut Depolama Ayarları'), 
-      desc: t('BulutDepolama_aciklama', 'Dosyalarınızı kendi bulut sürücülerinizde (Google Drive, OneDrive vb.) saklayın.'),
-      icon: <Cloud size={24} />,
-      component: (
-        <BulutDepolamaAyarlari 
-          onBack={handleBack} 
-          backRoute="/ayarlar/sistem-ayarlari/UygulamaEntegrasyonlari" 
-          showBackButton={false}
-        />
-      ),
-      hideHeader: true
-    },
-    { 
-      id: 'llm-entegrasyon', 
-      name: t('AiKullanim_baslik', 'Yapay Zeka & Akıllı Asistan Yönetimi'), 
-      desc: t('AiKullanim_aciklama', 'Webakus AI akıllı asistanları, kalan token kredisi ve kullanım istatistikleri.'),
-      icon: <Sparkles size={24} />,
-      component: <LlmEntegrasyonAyarlari hideHeader={true} />
-    }
-  ], [t, handleBack]);
+  const modules: SystemSettingModule[] = useMemo(
+    () => [
+      {
+        id: 'bulut-depolama',
+        name: t('BulutDepolama_baslik', 'Bulut Depolama Ayarları'),
+        desc: t(
+          'BulutDepolama_aciklama',
+          'Dosyalarınızı kendi bulut sürücülerinizde (Google Drive, OneDrive vb.) saklayın.'
+        ),
+        icon: <Cloud size={24} />,
+        component: (
+          <BulutDepolamaAyarlari
+            onBack={handleBack}
+            backRoute="/ayarlar/sistem-ayarlari/UygulamaEntegrasyonlari"
+            showBackButton={false}
+          />
+        ),
+        hideHeader: true,
+      },
+      {
+        id: 'llm-entegrasyon',
+        name: t('AiKullanim_baslik', 'Yapay Zeka & Akıllı Asistan Yönetimi'),
+        desc: t(
+          'AiKullanim_aciklama',
+          'Webakus AI akıllı asistanları, kalan token kredisi ve kullanım istatistikleri.'
+        ),
+        icon: <Sparkles size={24} />,
+        component: <LlmEntegrasyonAyarlari hideHeader={true} />,
+      },
+    ],
+    [t, handleBack]
+  );
 
   return (
     <BaseSystemPage
       title={t('Entegrasyonlar_baslik', 'Uygulama Entegrasyonları')}
-      subtitle={t('Entegrasyonlar_aciklama', 'Webakus\'u harici servisler ve bulut uygulamaları ile bağlayın.')}
+      subtitle={t('Entegrasyonlar_aciklama', "Webakus'u harici servisler ve bulut uygulamaları ile bağlayın.")}
       baseRoute="/ayarlar/sistem-ayarlari/UygulamaEntegrasyonlari"
       backRoute="/ayarlar/sistem-ayarlari"
       modules={modules}
