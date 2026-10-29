@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
@@ -17,39 +21,105 @@
     "noFallthroughCasesInSwitch": true,
     "allowJs": true,
     "paths": {
-      "react": ["../webakus/Webakus.UI/node_modules/@types/react"],
-      "react/*": ["../webakus/Webakus.UI/node_modules/@types/react/*"],
-      "react-dom": ["../webakus/Webakus.UI/node_modules/@types/react-dom"],
-      "react-dom/*": ["../webakus/Webakus.UI/node_modules/@types/react-dom/*"],
-      "react-router-dom": ["../webakus/node_modules/react-router-dom"],
-      "react-i18next": ["../webakus/node_modules/react-i18next"],
-      "i18next": ["../webakus/node_modules/i18next"],
-      "react-hot-toast": ["../webakus/node_modules/react-hot-toast"],
-      "axios": ["../webakus/node_modules/axios"],
-      "lucide-react": ["../webakus/node_modules/lucide-react"],
-      "xlsx": ["../webakus/node_modules/xlsx"],
-      "xlsx/*": ["../webakus/node_modules/xlsx/*"],
-      "@akalin/ui": ["../webakus/node_modules/@akalin/ui/src/index.ts"],
-      "@akalin/ui/*": ["../webakus/node_modules/@akalin/ui/src/*"],
-      "@akalin/module_core": ["../webakus/node_modules/@akalin/module_core/src/index.ts"],
-      "@akalin/module_core/*": ["../webakus/node_modules/@akalin/module_core/src/*"],
-      "@akalin/barcode_module": ["../akalin-barcode-module/src/index.ts"],
-      "@akalin/barcode_module/*": ["../akalin-barcode-module/src/*"],
-      "@akalin/customer_module": ["../akalin-customer-module/src/index.ts"],
-      "@akalin/customer_module/*": ["../akalin-customer-module/src/*"],
-      "@akalin/finance_module": ["../akalin-finance-module/src/index.ts"],
-      "@akalin/finance_module/*": ["../akalin-finance-module/src/*"],
-      "@akalin/product_module": ["../akalin-product-module/src/index.ts"],
-      "@akalin/product_module/*": ["../akalin-product-module/src/*"],
-      "@akalin/file_manager_module": ["../akalin-file-manager-module/src/index.ts"],
-      "@akalin/file_manager_module/*": ["../akalin-file-manager-module/src/*"],
-      "@akalin/storage_module": ["../akalin-file-manager-module/src/index.ts"],
-      "@akalin/storage_module/*": ["../akalin-file-manager-module/src/*"],
-      "@akalin/user_auth_module": ["../akalin-user-auth-module/src/index.ts"],
-      "@akalin/user_auth_module/*": ["../akalin-user-auth-module/src/*"],
-      "@akalin/warehouse_module": ["../akalin-warehouse-module/src/index.ts"],
-      "@akalin/warehouse_module/*": ["../akalin-warehouse-module/src/*"]
+      "react": [
+        "../webakus/Webakus.UI/node_modules/@types/react"
+      ],
+      "react/*": [
+        "../webakus/Webakus.UI/node_modules/@types/react/*"
+      ],
+      "react-dom": [
+        "../webakus/Webakus.UI/node_modules/@types/react-dom"
+      ],
+      "react-dom/*": [
+        "../webakus/Webakus.UI/node_modules/@types/react-dom/*"
+      ],
+      "react-router-dom": [
+        "../webakus/node_modules/react-router-dom"
+      ],
+      "react-i18next": [
+        "../webakus/node_modules/react-i18next"
+      ],
+      "i18next": [
+        "../webakus/node_modules/i18next"
+      ],
+      "react-hot-toast": [
+        "../webakus/node_modules/react-hot-toast"
+      ],
+      "axios": [
+        "../webakus/node_modules/axios"
+      ],
+      "lucide-react": [
+        "../webakus/node_modules/lucide-react"
+      ],
+      "xlsx": [
+        "../webakus/node_modules/xlsx"
+      ],
+      "xlsx/*": [
+        "../webakus/node_modules/xlsx/*"
+      ],
+      "@akalin/ui": [
+        "../webakus/node_modules/@akalin/ui/src/index.ts"
+      ],
+      "@akalin/ui/*": [
+        "../webakus/node_modules/@akalin/ui/src/*"
+      ],
+      "@akalin/module_core": [
+        "../webakus/node_modules/@akalin/module_core/src/index.ts"
+      ],
+      "@akalin/module_core/*": [
+        "../webakus/node_modules/@akalin/module_core/src/*"
+      ],
+      "@akalin/barcode_module": [
+        "../akalin-barcode-module/src/index.ts"
+      ],
+      "@akalin/barcode_module/*": [
+        "../akalin-barcode-module/src/*"
+      ],
+      "@akalin/customer_module": [
+        "../akalin-customer-module/src/index.ts"
+      ],
+      "@akalin/customer_module/*": [
+        "../akalin-customer-module/src/*"
+      ],
+      "@akalin/finance_module": [
+        "../akalin-finance-module/src/index.ts"
+      ],
+      "@akalin/finance_module/*": [
+        "../akalin-finance-module/src/*"
+      ],
+      "@akalin/product_module": [
+        "../akalin-product-module/src/index.ts"
+      ],
+      "@akalin/product_module/*": [
+        "../akalin-product-module/src/*"
+      ],
+      "@akalin/file_manager_module": [
+        "../akalin-file-manager-module/src/index.ts"
+      ],
+      "@akalin/file_manager_module/*": [
+        "../akalin-file-manager-module/src/*"
+      ],
+      "@akalin/storage_module": [
+        "../akalin-file-manager-module/src/index.ts"
+      ],
+      "@akalin/storage_module/*": [
+        "../akalin-file-manager-module/src/*"
+      ],
+      "@akalin/user_auth_module": [
+        "../akalin-user-auth-module/src/index.ts"
+      ],
+      "@akalin/user_auth_module/*": [
+        "../akalin-user-auth-module/src/*"
+      ],
+      "@akalin/warehouse_module": [
+        "../akalin-warehouse-module/src/index.ts"
+      ],
+      "@akalin/warehouse_module/*": [
+        "../akalin-warehouse-module/src/*"
+      ]
     }
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }
