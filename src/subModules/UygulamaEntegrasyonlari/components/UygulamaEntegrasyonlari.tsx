@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Cloud, Sparkles } from 'lucide-react';
 import { BaseSystemPage, SystemSettingModule } from '@akalin/ui';
-import { BulutDepolamaAyarlari } from '@akalin/storage_module';
+import { BulutDepolamaAyarlari } from '@akalin/file_manager_module';
 import LlmEntegrasyonAyarlari from './LlmEntegrasyonAyarlari';
 
 const UygulamaEntegrasyonlari: React.FC = () => {

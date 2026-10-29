@@ -28,7 +28,7 @@
     "@akalin/customer_module": "github:akalinserhat/akalin-customer-module#main",
     "@akalin/finance_module": "github:akalinserhat/akalin-finance-module#main",
     "@akalin/product_module": "github:akalinserhat/akalin-product-module#main",
-    "@akalin/storage_module": "github:akalinserhat/akalin-storage-module#main",
+    "@akalin/file_manager_module": "github:akalinserhat/akalin-file-manager-module#main",
     "@akalin/user_auth_module": "github:akalinserhat/akalin-user-auth-module#main",
     "@akalin/warehouse_module": "github:akalinserhat/akalin-warehouse-module#main",
     "axios": "^1.7.0",

@@ -2,7 +2,7 @@
  * Bulut Depolama Ayarları Sayfası (BulutDepolamaAyarlariPage) Bileşeni.
  * Kullanıcının Google Drive, OneDrive ve Dropbox entegrasyonlarını yönettiği tam sayfa arayüzü sunar.
  */
-import { BulutDepolamaAyarlari } from '@akalin/storage_module';
+import { BulutDepolamaAyarlari } from '@akalin/file_manager_module';
 
 const BulutDepolamaAyarlariPage: React.FC = () => {
     return (
