@@ -52,7 +52,6 @@ import { KargoFirmalari } from '../subModules/KargoFirmalari';
 import { BarkodYonetimi } from '../subModules/BarkodYonetimi';
 import { KasaListesiPage } from '../subModules/KasaHesaplari';
 import { BankaHesaplariPage } from '../subModules/BankaHesaplari';
-import { PosCihazlari } from '../subModules/PosCihazlari';
 import { TuketiciKredisiFirmalari } from '../subModules/TuketiciKredisiFirmalari';
 import { GelirGiderKartlariList } from '../subModules/GelirGiderKartlari';
 import { BelgeAyarlari } from '../subModules/BelgeAyarlari';
@@ -179,13 +178,6 @@ const coreModules: SystemSettingModule[] = [
     aliases: ['banka-hesaplari', 'Bankalar', 'bankalar', 'banka-hesap', 'BankaTanimlari']
   },
   { 
-    id: 'PosCihazlari', 
-    name: 'POS Cihazları', 
-    desc: 'Fiziksel ve sanal POS cihazları ile banka pos anlaşmaları',
-    icon: <CreditCard size={24} />,
-    hideHeader: true
-  },
-  { 
     id: 'TuketiciKredisiFirmalari', 
     name: 'Tüketici Kredisi Firmaları', 
     desc: 'Anlaşmalı tüketici finansman ve kredi kuruluşları yönetimi',
@@ -296,7 +288,21 @@ const SistemAyarlari = () => {
   const renderModuleContent = (mod: SystemSettingModule) => {
     let content: React.ReactNode = null;
 
-    if (mod.id === 'DepolarVeSubeler' || mod.bilesenId === 'DepolarVeSubeler') content = <DepolarVeSubeler />;
+    if (mod.component) {
+      const ModComp = mod.component;
+      const rendered = typeof ModComp === 'function'
+        ? React.createElement(ModComp as React.ComponentType)
+        : ModComp;
+      if ((mod as any).hasOwnLayout) {
+        return (
+          <div className="flex flex-col flex-1 min-h-0 overflow-hidden w-full h-full">
+            {rendered}
+          </div>
+        );
+      }
+      content = rendered;
+    }
+    else if (mod.id === 'DepolarVeSubeler' || mod.bilesenId === 'DepolarVeSubeler') content = <DepolarVeSubeler />;
     else if (mod.id === 'CariModulAyarlari' || mod.bilesenId === 'CariModulAyarlari') {
       return (
         <div className="flex flex-col flex-1 min-h-0 overflow-y-auto">
@@ -323,7 +329,6 @@ const SistemAyarlari = () => {
     else if (mod.id === 'OzellikTanimlari') content = <OzellikTanimlari />;
     else if (mod.id === 'KasaHesaplari') content = <KasaListesiPage />;
     else if (mod.id === 'BankaHesaplari') content = <BankaHesaplariPage />;
-    else if (mod.id === 'PosCihazlari') content = <PosCihazlari />;
     else if (mod.id === 'TuketiciKredisiFirmalari') content = <TuketiciKredisiFirmalari />;
     else if (mod.id === 'GelirGiderKartlari') content = <GelirGiderKartlariList />;
     else if (mod.id === 'FiyatListesiTanimlari') content = <FiyatListeTanimlariCardView />;
@@ -351,7 +356,7 @@ const SistemAyarlari = () => {
     const listBasedModules = [
       'DepolarVeSubeler', 'VergiVeKDV', 'ParaBirimleri', 'Markalar', 
       'Birimler', 'OzellikTanimlari', 'KasaHesaplari', 'BankaHesaplari', 
-      'PosCihazlari', 'TuketiciKredisiFirmalari', 'GelirGiderKartlari', 'RolVeYetkiler',
+      'TuketiciKredisiFirmalari', 'GelirGiderKartlari', 'RolVeYetkiler',
       'Kullanicilar', 'KullanicilarVePersonel',
       'FiyatListesiTanimlari', 'UrunGruplari', 'HizmetGruplari', 'BarkodYonetimi', 'KargoFirmalari'
     ];

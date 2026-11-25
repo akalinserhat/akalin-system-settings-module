@@ -41,9 +41,6 @@ export * from './subModules/ParaBirimleri/services/ParaBirimleriService';
 export * from './subModules/KargoFirmalari';
 export * from './subModules/KargoFirmalari/services/KargoFirmasiService';
 
-// SubModules - POS Cihazları
-export * from './subModules/PosCihazlari';
-
 // SubModules - Tüketici Kredisi Firmaları
 export * from './subModules/TuketiciKredisiFirmalari';
 

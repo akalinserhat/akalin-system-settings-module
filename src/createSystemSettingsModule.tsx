@@ -21,8 +21,6 @@ export const KargoFirmalariPage = lazy(() => import('./subModules/KargoFirmalari
 export const KargoFirmasiFormPage = lazy(() => import('./subModules/KargoFirmalari').then(m => ({ default: m.KargoFirmasiFormPage })));
 export const GelirGiderKartiFormPage = lazy(() => import('./subModules/GelirGiderKartlari').then(m => ({ default: m.GelirGiderKartiFormPage })));
 export const KdvFormPage = lazy(() => import('./subModules/VergiVeKdv').then(m => ({ default: m.KdvFormPage })));
-export const PosCihazFormPage = lazy(() => import('./subModules/PosCihazlari').then(m => ({ default: m.PosCihazFormPage })));
-export const PosKomisyonBelgesiFormPage = lazy(() => import('./subModules/PosCihazlari').then(m => ({ default: m.PosKomisyonBelgesiFormPage })));
 export const TuketiciKredisiFirmasiFormPage = lazy(() => import('./subModules/TuketiciKredisiFirmalari').then(m => ({ default: m.TuketiciKredisiFirmasiFormPage })));
 export const TuketiciKredisiKomisyonBelgesiFormPage = lazy(() => import('./subModules/TuketiciKredisiFirmalari').then(m => ({ default: m.TuketiciKredisiKomisyonBelgesiFormPage })));
 export const FiyatListesiTanimFormPage = lazy(() => import('./subModules/FiyatListesiTanimlari').then(m => ({ default: m.FiyatListesiTanimFormPage })));
@@ -80,10 +78,6 @@ export const createSystemSettingsModule = (
       { path: '/ayarlar/sistem-ayarlari/gelirgider/duzenle/:id', element: React.createElement(withProvider(GelirGiderKartiFormPage)), title: 'Gelir/Gider Kartı Düzenle' },
       { path: '/ayarlar/sistem-ayarlari/VergiVeKDV/yeni', element: React.createElement(withProvider(KdvFormPage)), title: 'Yeni KDV Tanımı' },
       { path: '/ayarlar/sistem-ayarlari/VergiVeKDV/duzenle/:id', element: React.createElement(withProvider(KdvFormPage)), title: 'KDV Tanımı Düzenle' },
-      { path: '/ayarlar/sistem-ayarlari/PosCihazlari/yeni', element: React.createElement(withProvider(PosCihazFormPage)), title: 'Yeni POS Cihazı' },
-      { path: '/ayarlar/sistem-ayarlari/PosCihazlari/duzenle/:id', element: React.createElement(withProvider(PosCihazFormPage)), title: 'POS Cihazı Düzenle' },
-      { path: '/ayarlar/sistem-ayarlari/PosCihazlari/:posCihazId/komisyon-belgeleri/yeni', element: React.createElement(withProvider(PosKomisyonBelgesiFormPage)), title: 'Yeni POS Komisyon Belgesi' },
-      { path: '/ayarlar/sistem-ayarlari/PosCihazlari/:posCihazId/komisyon-belgeleri/duzenle/:id', element: React.createElement(withProvider(PosKomisyonBelgesiFormPage)), title: 'POS Komisyon Belgesi Düzenle' },
       { path: '/ayarlar/sistem-ayarlari/TuketiciKredisiFirmalari/yeni', element: React.createElement(withProvider(TuketiciKredisiFirmasiFormPage)), title: 'Yeni Tüketici Kredisi Firması' },
       { path: '/ayarlar/sistem-ayarlari/TuketiciKredisiFirmalari/duzenle/:id', element: React.createElement(withProvider(TuketiciKredisiFirmasiFormPage)), title: 'Tüketici Kredisi Firması Düzenle' },
       { path: '/ayarlar/sistem-ayarlari/TuketiciKredisiFirmalari/:tuketiciKredisiFirmasiId/komisyon-belgeleri/yeni', element: React.createElement(withProvider(TuketiciKredisiKomisyonBelgesiFormPage)), title: 'Yeni Komisyon Belgesi' },
