@@ -73,6 +73,7 @@ export * from './subModules/KasaHesaplari';
 export * from './subModules/BankaHesaplari';
 export * from './subModules/BarkodYonetimi';
 export * from './subModules/RolVeYetkiler';
+export { KullanicilarPage } from './subModules/KullanicilarVePersonel';
 export * from './subModules/Markalar';
 export * from './subModules/Birimler';
 export * from './subModules/OzellikTanimlari';
