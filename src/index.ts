@@ -83,5 +83,9 @@ export * from './subModules/FiyatListesiTanimlari';
 export { default as SistemAyarlariPage } from './pages/SistemAyarlari';
 
 // Modül Tanımı ve Fabrika Fonksiyonu
-export * from './createSystemSettingsModule';
+export {
+  createSystemSettingsModule,
+  SistemAyarlariModule,
+  type CreateSystemSettingsModuleOptions
+} from './createSystemSettingsModule';
 export { SistemAyarlariModule as default } from './createSystemSettingsModule';
