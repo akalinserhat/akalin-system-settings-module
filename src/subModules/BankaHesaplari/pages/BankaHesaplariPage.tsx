@@ -18,7 +18,7 @@ import {
   EkleMenuButton,
   BaseSystemCard 
 } from '@akalin/ui';
-import { Landmark, Edit2, List, Trash2, Plus, RefreshCcw } from 'lucide-react';
+import { Landmark, Edit2, Trash2, Plus, RefreshCcw } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 
 export interface BankaHesabiDto {
@@ -175,11 +175,6 @@ const BankaHesaplariPage: React.FC<BankaHesaplariPageProps> = ({
                         label: t('auto_duzenle', 'Düzenle'),
                         icon: <Edit2 size={15} />,
                         onClick: (e) => onEdit(item, e)
-                      },
-                      {
-                        label: t('hareketler', 'Hareketler'),
-                        icon: <List size={15} />,
-                        onClick: () => navigate(`/ayarlar/bankalar/hesaplar/${item.id}/hareketler`, { state: { returnUrl: '/ayarlar/sistem-ayarlari/BankaHesaplari' } })
                       },
                       {
                         label: t('auto_sil', 'Sil'),

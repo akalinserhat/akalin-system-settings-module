@@ -24,6 +24,7 @@
     "react-router-dom": "^6.0.0"
   },
   "dependencies": {
+    "@akalin/bank_module": "github:akalinserhat/akalin-bank-module#main",
     "@akalin/barcode_module": "github:akalinserhat/akalin-barcode-module#main",
     "@akalin/customer_module": "github:akalinserhat/akalin-customer-module#main",
     "@akalin/finance_module": "github:akalinserhat/akalin-finance-module#main",

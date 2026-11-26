@@ -51,7 +51,7 @@ import { DepolarVeSubeler } from '../subModules/DepolarVeSubeler';
 import { KargoFirmalari } from '../subModules/KargoFirmalari';
 import { BarkodYonetimi } from '../subModules/BarkodYonetimi';
 import { KasaListesiPage } from '../subModules/KasaHesaplari';
-import { BankaHesaplariPage } from '../subModules/BankaHesaplari';
+import { BankaHesaplariPage, BankaAyarlari } from '../subModules/BankaHesaplari';
 import { TuketiciKredisiFirmalari } from '../subModules/TuketiciKredisiFirmalari';
 import { GelirGiderKartlariList } from '../subModules/GelirGiderKartlari';
 import { BelgeAyarlari } from '../subModules/BelgeAyarlari';
@@ -170,12 +170,13 @@ const coreModules: SystemSettingModule[] = [
     hideHeader: true
   },
   { 
-    id: 'BankaHesaplari', 
-    name: 'Banka Hesapları', 
-    desc: 'Vadesiz, vadeli ve ticari banka hesapları ile IBAN tanımlamaları',
+    id: 'Banka', 
+    name: 'Banka', 
+    desc: 'Banka hesapları, IBAN tanımlamaları ve POS cihazı anlaşmaları',
     icon: <Landmark size={24} />,
     hideHeader: true,
-    aliases: ['banka-hesaplari', 'Bankalar', 'bankalar', 'banka-hesap', 'BankaTanimlari']
+    hasOwnLayout: true,
+    aliases: ['banka', 'BankaHesaplari', 'banka-hesaplari', 'Bankalar', 'bankalar', 'banka-hesap', 'BankaTanimlari', 'PosCihazlari', 'pos-cihazlari', 'PosTanimlari', 'pos-tanimlari']
   },
   { 
     id: 'TuketiciKredisiFirmalari', 
@@ -328,6 +329,13 @@ const SistemAyarlari = () => {
     else if (mod.id === 'Birimler') content = <Birimler />;
     else if (mod.id === 'OzellikTanimlari') content = <OzellikTanimlari />;
     else if (mod.id === 'KasaHesaplari') content = <KasaListesiPage />;
+    else if (mod.id === 'Banka') {
+      return (
+        <div className="flex flex-col flex-1 min-h-0 overflow-hidden">
+          <BankaAyarlari />
+        </div>
+      );
+    }
     else if (mod.id === 'BankaHesaplari') content = <BankaHesaplariPage />;
     else if (mod.id === 'TuketiciKredisiFirmalari') content = <TuketiciKredisiFirmalari />;
     else if (mod.id === 'GelirGiderKartlari') content = <GelirGiderKartlariList />;

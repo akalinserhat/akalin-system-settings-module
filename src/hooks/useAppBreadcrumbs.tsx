@@ -57,6 +57,8 @@ const submoduleMap: Record<string, { label: string; path: string }> = {
   'belge-ayarlari': { label: 'Belge Ayarları', path: '/ayarlar/sistem-ayarlari/BelgeAyarlari' },
   'KasaHesaplari': { label: 'Kasa Hesapları', path: '/ayarlar/sistem-ayarlari/KasaHesaplari' },
   'kasa-hesaplari': { label: 'Kasa Hesapları', path: '/ayarlar/sistem-ayarlari/KasaHesaplari' },
+  'Banka': { label: 'Banka', path: '/ayarlar/sistem-ayarlari/Banka' },
+  'banka': { label: 'Banka', path: '/ayarlar/sistem-ayarlari/Banka' },
   'BankaHesaplari': { label: 'Banka Hesapları', path: '/ayarlar/sistem-ayarlari/BankaHesaplari' },
   'banka-hesaplari': { label: 'Banka Hesapları', path: '/ayarlar/sistem-ayarlari/BankaHesaplari' },
   'PosCihazlari': { label: 'POS Cihazları', path: '/ayarlar/sistem-ayarlari/PosCihazlari' },

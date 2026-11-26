@@ -69,6 +69,12 @@
       "@akalin/module_core/*": [
         "../webakus/node_modules/@akalin/module_core/src/*"
       ],
+      "@akalin/bank_module": [
+        "../akalin-bank-module/src/index.ts"
+      ],
+      "@akalin/bank_module/*": [
+        "../akalin-bank-module/src/*"
+      ],
       "@akalin/barcode_module": [
         "../akalin-barcode-module/src/index.ts"
       ],
